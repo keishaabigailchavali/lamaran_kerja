@@ -1,0 +1,164 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font: 16px/1.5 system-ui, Arial, sans-serif;
+    background: #e9eef2;
+    color: #1c2530;
+}
+
+.app {
+    display: grid;
+    grid-template-columns: 340px 1fr;
+    min-height: 100vh;
+}
+
+.side {
+    background: #fff;
+    border-right: 1px solid #cdd6df;
+    padding: 18px;
+}
+
+h1 {
+    font-size: 20px;
+    margin: 0 0 12px;
+}
+
+label {
+    display: block;
+    font-size: 13px;
+    color: #5d6b7a;
+    margin: 10px 0 3px;
+}
+
+input,
+select {
+    width: 100%;
+    font: inherit;
+    padding: 8px 10px;
+    border: 1px solid #cdd6df;
+    border-radius: 6px;
+}
+
+input:focus,
+select:focus {
+    outline: 2px solid #2a6f5c;
+}
+
+.gaya {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 6px;
+    margin-bottom: 6px;
+}
+
+.gaya button {
+    padding: 8px 4px;
+    font: inherit;
+    font-size: 13px;
+    border: 1px solid #cdd6df;
+    background: #fff;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.gaya button.on {
+    background: #2a6f5c;
+    color: #fff;
+    border-color: #2a6f5c;
+}
+
+.cetak {
+    width: 100%;
+    margin-top: 16px;
+    padding: 10px;
+    font: inherit;
+    font-weight: 600;
+    background: #1c2530;
+    color: #fff;
+    border: 0;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.stage {
+    padding: 24px 12px;
+    overflow: auto;
+}
+
+.kertas {
+    width: 210mm;
+    max-width: 100%;
+    min-height: 297mm;
+    margin: 0 auto;
+    background: #fff;
+    padding: 22mm;
+    font: 12pt/1.5 "Times New Roman", serif;
+    color: #000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, .15);
+}
+
+.kertas p {
+    margin: 0 0 12pt;
+    text-align: justify;
+}
+
+.kertas .kanan {
+    text-align: right;
+}
+
+.kertas .kiri {
+    text-align: left;
+}
+
+.kertas .ttd {
+    height: 56pt;
+}
+
+.kosong {
+    background: #fff2b8;
+}
+
+@media (max-width: 800px) {
+    .app {
+        grid-template-columns: 1fr;
+    }
+
+    .kertas {
+        padding: 12mm;
+        min-height: 0;
+    }
+}
+
+@media print {
+    @page {
+        size: A4;
+        margin: 0;
+    }
+
+    .side {
+        display: none;
+    }
+
+    .app {
+        display: block;
+    }
+
+    body,
+    .stage {
+        background: #fff;
+        padding: 0;
+    }
+
+    .kertas {
+        box-shadow: none;
+        padding: 22mm;
+    }
+
+    .kosong {
+        background: none;
+    }
+}

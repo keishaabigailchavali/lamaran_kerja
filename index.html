@@ -1,0 +1,65 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Surat Lamaran 3 Gaya</title>
+
+    <!-- Menghubungkan CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="app">
+
+    <aside class="side">
+        <h1>Surat lamaran</h1>
+
+        <label>Gaya surat</label>
+        <div class="gaya" id="gaya">
+            <button data-g="formal" class="on">Formal</button>
+            <button data-g="singkat">Singkat</button>
+            <button data-g="keahlian">Keahlian</button>
+        </div>
+
+        <label for="nama">Nama lengkap</label>
+        <input id="nama">
+
+        <label for="kota">Kota Anda</label>
+        <input id="kota" placeholder="Jakarta">
+
+        <label for="perusahaan">Nama perusahaan</label>
+        <input id="perusahaan">
+
+        <label for="posisi">Posisi dilamar</label>
+        <input id="posisi">
+
+        <label for="pendidikan">Pendidikan terakhir</label>
+        <input id="pendidikan" placeholder="S1 Akuntansi, Universitas ...">
+
+        <label for="keahlian">Keahlian (pisahkan koma)</label>
+        <input id="keahlian" placeholder="Excel, administrasi, komunikasi">
+
+        <label for="hp">No. HP</label>
+        <input id="hp" type="tel">
+
+        <label for="email">Email</label>
+        <input id="email" type="email">
+
+        <button class="cetak" id="cetak">
+            Cetak / simpan PDF
+        </button>
+    </aside>
+
+    <main class="stage">
+        <div class="kertas" id="kertas"></div>
+    </main>
+
+</div>
+
+<!-- Menghubungkan JavaScript -->
+<script src="script.js"></script>
+
+</body>
+</html>
